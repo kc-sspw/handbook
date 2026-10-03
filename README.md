@@ -10,6 +10,7 @@ Celem handbooka jest ograniczenie wiedzy „tylko w głowach” i ułatwienie pr
 - [Repozytoria i nazewnictwo](docs/repositories.md) — kiedy tworzyć repo i jak je nazywać.
 - [Prowadzenie projektów](docs/projects.md) — domyślny workflow dla utrzymywanych projektów Komisji.
 - [Repozytoria szkoleniowe](docs/trainings.md) — luźniejsze zasady dla kodu tworzonego podczas warsztatów.
+- [Szkolenie: Azure + Node.js + GitHub Actions](docs/trainings/azure-node-github-actions.md) — konwencja i starter do szkolenia wdrożeniowego.
 - [Bezpieczeństwo](docs/security.md) — podstawowe zasady dotyczące sekretów, dostępów i danych.
 - [Przekazanie projektu](docs/handover.md) — checklista na zmianę opiekuna lub kadencji.
 
@@ -17,6 +18,7 @@ Celem handbooka jest ograniczenie wiedzy „tylko w głowach” i ułatwienie pr
 
 - [README dla projektu Komisji](templates/PROJECT_README.md)
 - [README dla repozytorium szkoleniowego](templates/TRAINING_README.md)
+- [Starter Node.js do szkolenia Azure](templates/training-azure-node/) — minimalna aplikacja, test i GitHub Actions CI.
 
 ## Dwie kategorie pracy
 
