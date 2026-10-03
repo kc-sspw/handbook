@@ -16,6 +16,13 @@ W tych repozytoriach:
 
 Prowadzący może ustalić inne zasady dla konkretnego szkolenia.
 
+## Bieżące przykłady
+
+Dla szkolenia z wdrożeń Node.js do Azure przy użyciu GitHub Actions zobacz:
+
+- [Azure + Node.js + GitHub Actions](trainings/azure-node-github-actions.md)
+- [minimalny starter Node.js](../templates/training-azure-node/)
+
 ## Oznaczenie repozytorium
 
 README powinno zawierać informację, że repo powstało w ramach szkolenia. Dzięki temu nie zostanie przypadkiem potraktowane jako oficjalnie utrzymywany system Komisji.

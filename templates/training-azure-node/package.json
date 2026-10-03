@@ -1,0 +1,13 @@
+{
+  "name": "training-azure-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal Node.js app for KC SSPW deployment training",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
