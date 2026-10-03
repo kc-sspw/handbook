@@ -7,7 +7,10 @@ Celem handbooka jest ograniczenie wiedzy „tylko w głowach” i ułatwienie pr
 ## Najważniejsze dokumenty
 
 - [Onboarding](docs/onboarding.md) — od czego zacząć jako nowa osoba w Komisji.
+- [Struktura organizacji i ludzi](docs/organization-structure.md) — Owners, członkowie, prowadzący, zespoły projektowe i uczestnicy szkoleń.
+- [Model uprawnień](docs/access-model.md) — jak nadawać dostęp do organizacji i repozytoriów.
 - [Repozytoria i nazewnictwo](docs/repositories.md) — kiedy tworzyć repo i jak je nazywać.
+- [Cykl życia projektu](docs/project-lifecycle.md) — od pomysłu do archiwizacji.
 - [Prowadzenie projektów](docs/projects.md) — domyślny workflow dla utrzymywanych projektów Komisji.
 - [Repozytoria szkoleniowe](docs/trainings.md) — luźniejsze zasady dla kodu tworzonego podczas warsztatów.
 - [Szkolenie: Azure + Node.js + GitHub Actions](docs/trainings/azure-node-github-actions.md) — konwencja i starter do szkolenia wdrożeniowego.
