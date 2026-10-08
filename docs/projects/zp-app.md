@@ -10,17 +10,17 @@ Aktualnie połączone konto `Korniszon99` ma do źródła możliwość zapisu, a
 
 ## Wybrany sposób przeniesienia
 
-**Fork do organizacji `kc-sspw`** jest preferowanym sposobem zachowania pracy w obecnym stanie.
+**Transfer repozytorium do organizacji `kc-sspw`** jest preferowanym sposobem przeniesienia.
 
 Powody:
 
-- źródło jest już na GitHubie,
-- właścicielem źródła jest inne konto,
-- aktualnie połączone konto nie ma uprawnień Admin wymaganych do transferu,
-- fork zachowuje relację z upstreamem i nie usuwa ani nie nadpisuje źródła,
-- źródło ma pozostać nienaruszone.
+- repozytorium jest już kanoniczną implementacją Kreatora ZP, a nie forkiem zewnętrznego projektu,
+- celem jest przeniesienie odpowiedzialności za projekt z konta osobistego do organizacji KC,
+- transfer zachowuje to samo repozytorium, historię i gałęzie zamiast tworzyć drugą kopię,
+- źródło jest publiczne i zgodnie z zasadą zadania nie zmieniamy jego widoczności,
+- utworzenie publicznego forka byłoby nowym repozytorium i nie odpowiada zasadzie, że nowe repozytoria projektowe mają być prywatne.
 
-Jeśli właściciel `kasrow12` później zdecyduje o pełnym przekazaniu własności i ma to zastąpić upstream, można osobno rozważyć transfer zamiast forka.
+Aktualnie połączone konto nie ma jednak uprawnień Admin do źródła, więc nie może zainicjować transferu. Operację musi wykonać właściciel lub administrator repozytorium źródłowego, a obecna integracja nie wystawia endpointu transferu.
 
 ## Audyt przed migracją — 8.10.2026
 
@@ -47,7 +47,7 @@ Przeprowadzono heurystyczne skanowanie bieżącej zawartości obu gałęzi oraz 
 
 ### GitHub Actions i sekrety
 
-Workflow na `develop` używa sekretu Azure oraz `GITHUB_TOKEN`. Wartości sekretów nie są widoczne i nie należy ich kopiować automatycznie. Po forku nie uruchamiamy deploymentu ani nie konfigurujemy infrastruktury bez osobnego uzgodnienia.
+Workflow na `develop` używa sekretu Azure oraz `GITHUB_TOKEN`. Wartości sekretów nie są widoczne i nie należy ich kopiować automatycznie. Po transferze nie uruchamiamy deploymentu ani nie rekonfigurujemy infrastruktury bez osobnego uzgodnienia.
 
 ### Wiki
 
@@ -59,13 +59,13 @@ Metadane gałęzi wskazują `protected: false`, a repo nie ma rulesetów. Szczeg
 
 ## Stan wykonania
 
-Fork nie został jeszcze utworzony, ponieważ podłączona integracja GitHub nie udostępnia operacji tworzenia forka ani nowego repozytorium w organizacji. Nie tworzono ręcznego „pseudo-forka”, aby nie utracić relacji upstream i metadanych GitHuba.
+Transfer nie został wykonany, ponieważ połączone konto nie ma uprawnień Admin do `kasrow12/zp-app`, a podłączona integracja GitHub nie udostępnia operacji transferu repozytorium. Nie utworzono zastępczej kopii ani forka, żeby nie tworzyć równoległego kanonicznego repozytorium.
 
-Po utworzeniu forka należy zweryfikować:
+Po wykonaniu transferu należy zweryfikować:
 
 1. obecność gałęzi `main` i `develop`,
 2. zgodność SHA ich głów,
 3. historię commitów,
 4. brak/presence tagów zgodnie ze źródłem,
-5. zachowanie relacji fork → upstream,
-6. stan workflowów bez uruchamiania deploymentu.
+5. właściciela `kc-sspw` i niezmienioną widoczność publiczną,
+6. stan wiki i workflowów bez uruchamiania deploymentu.
