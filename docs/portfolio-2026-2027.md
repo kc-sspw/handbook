@@ -4,10 +4,10 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 
 ## Projekty w zakresie
 
-1. **Mój Akademik** — planowane repo: `moj-akademik`.
-2. **Appka eventowa** — planowane repo: `appka-eventowa`. W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
-3. **System wypożyczania istniejącego sprzętu** — planowane repo: `wypozyczalnia-sprzetu`.
-4. **zp-app** — potwierdzone źródło: `kasrow12/zp-app`; zatwierdzony publiczny fork do organizacji `kc-sspw` z zachowaniem relacji upstream.
+1. **Mój Akademik** — repo: `kc-sspw/moj-akademik` (private).
+2. **Appka eventowa** — repo: `kc-sspw/appka-eventowa` (private). W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
+3. **System wypożyczania istniejącego sprzętu** — repo: `kc-sspw/system-wypozyczen` (private).
+4. **zp-app** — publiczny fork `kc-sspw/zp-app` źródła `kasrow12/zp-app`, z zachowaniem relacji upstream.
 
 **PWHub jest poza zakresem tego portfela GitHub i nie należy zmieniać jego repozytoriów ani konfiguracji w ramach tego zadania.**
 
@@ -53,4 +53,4 @@ Projekt dotyczy istniejącego sprzętu; zakupy nie są warunkiem. Minimalny proc
 
 ### zp-app
 
-Źródło zostało potwierdzone jako publiczne repozytorium GitHub `kasrow12/zp-app`. Audyt wykazał gałęzie `main` i `develop`, brak tagów/releases/issues oraz historyczny workflow Azure na `develop`. Zatwierdzony jest publiczny fork do `kc-sspw` jako wyjątek od domyślnej prywatności nowych repozytoriów. Operacja pozostaje zablokowana technicznie, ponieważ aktualna integracja nie udostępnia tworzenia forka.
+Źródło zostało potwierdzone jako publiczne repozytorium GitHub `kasrow12/zp-app`. Audyt wykazał gałęzie `main` i `develop`, brak tagów/releases/issues oraz historyczny workflow Azure na `develop`. Fork `kc-sspw/zp-app` został utworzony i zweryfikowany. Relacja upstream wskazuje `kasrow12/zp-app`; gałęzie `main` i `develop` mają identyczne SHA jak źródło, a historia zawiera 59 commitów.
