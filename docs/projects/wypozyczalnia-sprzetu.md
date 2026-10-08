@@ -31,6 +31,6 @@ Nie zakładamy dostępu do danych ani infrastruktury, dopóki nie zostaną potwi
 
 Ustalić właściciela procesu i wykonać pierwszą inwentaryzację potrzebną do jednego pełnego scenariusza wypożyczenia.
 
-## Proponowane repozytorium
+## Repozytorium
 
-`kc-sspw/wypozyczalnia-sprzetu` — prywatne.
+`kc-sspw/system-wypozyczen` — prywatne.
