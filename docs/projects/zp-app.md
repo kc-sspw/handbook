@@ -10,17 +10,17 @@ Aktualnie połączone konto `Korniszon99` ma do źródła możliwość zapisu, a
 
 ## Wybrany sposób przeniesienia
 
-**Transfer repozytorium do organizacji `kc-sspw`** jest preferowanym sposobem przeniesienia.
+**Publiczny fork `kasrow12/zp-app` do organizacji `kc-sspw`** został zatwierdzony jako świadomy wyjątek od domyślnej zasady prywatności nowych repozytoriów projektowych.
 
 Powody:
 
-- repozytorium jest już kanoniczną implementacją Kreatora ZP, a nie forkiem zewnętrznego projektu,
-- celem jest przeniesienie odpowiedzialności za projekt z konta osobistego do organizacji KC,
-- transfer zachowuje to samo repozytorium, historię i gałęzie zamiast tworzyć drugą kopię,
-- źródło jest publiczne i zgodnie z zasadą zadania nie zmieniamy jego widoczności,
-- utworzenie publicznego forka byłoby nowym repozytorium i nie odpowiada zasadzie, że nowe repozytoria projektowe mają być prywatne.
+- źródło jest już na GitHubie i ma pozostać nienaruszone,
+- chcemy zachować natywną relację fork/upstream,
+- fork zachowuje historię Git i pozwala rozwijać wersję KC niezależnie,
+- nie wymaga transferu własności źródłowego repozytorium,
+- widoczność forka będzie publiczna, co zostało osobno zaakceptowane przez użytkownika 8.10.2026.
 
-Aktualnie połączone konto nie ma jednak uprawnień Admin do źródła, więc nie może zainicjować transferu. Operację musi wykonać właściciel lub administrator repozytorium źródłowego, a obecna integracja nie wystawia endpointu transferu.
+Wyjątek dotyczy wyłącznie `zp-app` i nie zmienia zasady, że pozostałe nowe repozytoria projektowe Komisji mają być prywatne.
 
 ## Audyt przed migracją — 8.10.2026
 
@@ -47,7 +47,7 @@ Przeprowadzono heurystyczne skanowanie bieżącej zawartości obu gałęzi oraz 
 
 ### GitHub Actions i sekrety
 
-Workflow na `develop` używa sekretu Azure oraz `GITHUB_TOKEN`. Wartości sekretów nie są widoczne i nie należy ich kopiować automatycznie. Po transferze nie uruchamiamy deploymentu ani nie rekonfigurujemy infrastruktury bez osobnego uzgodnienia.
+Workflow na `develop` używa sekretu Azure oraz `GITHUB_TOKEN`. Wartości sekretów nie są widoczne i nie należy ich kopiować automatycznie. Po utworzeniu forka nie uruchamiamy deploymentu ani nie rekonfigurujemy infrastruktury bez osobnego uzgodnienia.
 
 ### Wiki
 
@@ -59,13 +59,14 @@ Metadane gałęzi wskazują `protected: false`, a repo nie ma rulesetów. Szczeg
 
 ## Stan wykonania
 
-Transfer nie został wykonany, ponieważ połączone konto nie ma uprawnień Admin do `kasrow12/zp-app`, a podłączona integracja GitHub nie udostępnia operacji transferu repozytorium. Nie utworzono zastępczej kopii ani forka, żeby nie tworzyć równoległego kanonicznego repozytorium.
+Wyjątek publicznego forka został zatwierdzony. Sam fork nie został jeszcze utworzony, ponieważ podłączona integracja GitHub nie udostępnia operacji tworzenia forka, a w środowisku wykonawczym nie ma uwierzytelnionego GitHub CLI.
 
-Po wykonaniu transferu należy zweryfikować:
+Po utworzeniu forka należy zweryfikować:
 
 1. obecność gałęzi `main` i `develop`,
 2. zgodność SHA ich głów,
 3. historię commitów,
 4. brak/presence tagów zgodnie ze źródłem,
-5. właściciela `kc-sspw` i niezmienioną widoczność publiczną,
-6. stan wiki i workflowów bez uruchamiania deploymentu.
+5. relację fork → upstream `kasrow12/zp-app`,
+6. właściciela `kc-sspw` i widoczność publiczną,
+7. stan wiki i workflowów bez uruchamiania deploymentu.
