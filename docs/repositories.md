@@ -33,7 +33,12 @@ Nie ma potrzeby wymuszać jednego schematu dla wszystkich przyszłych szkoleń �
 Domyślnie:
 
 - materiały szkoleniowe i projekty open source mogą być publiczne,
+- nowe repozytoria utrzymywanych projektów Komisji tworzymy prywatne, jeśli nie ma zatwierdzonego wyjątku,
 - repozytoria zawierające dane lub integracje, których nie należy ujawniać, powinny być prywatne.
+
+### Zatwierdzony wyjątek 2026/2027
+
+Dla `zp-app` zatwierdzono publiczny fork źródła `kasrow12/zp-app` do organizacji `kc-sspw`. Wyjątek wynika z potrzeby zachowania relacji GitHub fork/upstream dla istniejącego publicznego projektu i nie zmienia domyślnej zasady dla pozostałych nowych repozytoriów projektowych.
 
 Sama prywatność repozytorium nie zastępuje poprawnego zarządzania sekretami.
 
