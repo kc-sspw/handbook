@@ -1,41 +1,71 @@
 # zp-app — migracja do organizacji KC
 
-## Stan
+## Potwierdzone źródło
 
-W dostępnych źródłach portfela występuje projekt **Kreator ZP**: feedback i bieżące poprawki; najbliższy wynik to zebranie uwag, połączenie powtarzających się tematów i wybór trzech poprawek.
+Źródło: https://github.com/kasrow12/zp-app
 
-Nie ma jednak potwierdzenia, że wskazane przez użytkownika repozytorium `zp-app` jest tym samym projektem ani gdzie dokładnie się znajduje.
+Repozytorium jest na GitHubie, właścicielem jest konto `kasrow12`, a widoczność źródła jest publiczna. Repo nie jest forkiem. Zawartość README potwierdza, że jest to Generator Wniosków o Udzielenie Zamówienia Publicznego dla Samorządu Studentów Politechniki Warszawskiej, więc odpowiada projektowi **Kreator ZP** z portfela KC.
 
-## Informacje wymagane przed migracją
+Aktualnie połączone konto `Korniszon99` ma do źródła możliwość zapisu, ale nie ma uprawnień Admin. Oznacza to, że z tego konta nie można wykonać transferu własności repozytorium.
 
-- dokładny URL źródłowego repozytorium,
-- platforma źródłowa,
-- właściciel,
-- widoczność,
-- poziom dostępu umożliwiający migrację.
+## Wybrany sposób przeniesienia
 
-## Dobór sposobu przeniesienia
+**Fork do organizacji `kc-sspw`** jest preferowanym sposobem zachowania pracy w obecnym stanie.
 
-- **Fork** — jeśli źródło jest na GitHubie i ma pozostać aktywny upstream.
-- **Transfer** — jeśli istniejące repozytorium GitHub ma po prostu zmienić właściciela na `kc-sspw`.
-- **Migracja Git** — jeśli źródło jest na innej platformie.
+Powody:
 
-## Kontrola przed migracją
+- źródło jest już na GitHubie,
+- właścicielem źródła jest inne konto,
+- aktualnie połączone konto nie ma uprawnień Admin wymaganych do transferu,
+- fork zachowuje relację z upstreamem i nie usuwa ani nie nadpisuje źródła,
+- źródło ma pozostać nienaruszone.
 
-Przed zmianą należy osobno sprawdzić:
+Jeśli właściciel `kasrow12` później zdecyduje o pełnym przekazaniu własności i ma to zastąpić upstream, można osobno rozważyć transfer zamiast forka.
 
-- historię commitów,
-- branche,
-- tagi,
-- issues,
-- wiki,
-- releases,
-- Git LFS,
-- submodules,
-- automatyzacje/workflows,
-- reguły repozytorium,
-- obecność sekretów lub danych dostępowych.
+## Audyt przed migracją — 8.10.2026
 
-Sekretów nie wyświetlamy ani nie kopiujemy do dokumentacji.
+Szczegóły: [audyt migracji](zp-app-migration-audit-2026-10-08.md).
 
-Źródła nie usuwamy i nie nadpisujemy istniejącego repozytorium docelowego.
+Najważniejsze ustalenia:
+
+- domyślna gałąź: `main`,
+- dodatkowa gałąź: `develop`,
+- `develop` jest przodkiem `main`; `main` jest 13 commitów przed `develop`,
+- łącznie wykryto 59 commitów w historii repozytorium,
+- brak tagów,
+- brak releases,
+- brak Issues i Pull Requestów,
+- brak rulesetów; obie gałęzie są raportowane jako niechronione,
+- brak Git LFS,
+- brak submodules,
+- na `develop` istnieje workflow Azure Static Web Apps, usunięty później z `main`,
+- workflow odwołuje się do sekretów GitHub Actions, ale nie zawiera ich wartości.
+
+Przeprowadzono heurystyczne skanowanie bieżącej zawartości obu gałęzi oraz diffów wszystkich 59 commitów pod kątem typowych wzorców osadzonych sekretów. Nie wykryto wysokiej pewności sekretów zapisanych w kodzie. API GitHub Secret Scanning nie jest dostępne przez obecną integrację, więc wynik nie zastępuje natywnego skanowania sekretów.
+
+## Elementy wymagające osobnej uwagi
+
+### GitHub Actions i sekrety
+
+Workflow na `develop` używa sekretu Azure oraz `GITHUB_TOKEN`. Wartości sekretów nie są widoczne i nie należy ich kopiować automatycznie. Po forku nie uruchamiamy deploymentu ani nie konfigurujemy infrastruktury bez osobnego uzgodnienia.
+
+### Wiki
+
+Funkcja Wiki jest w źródłowym repozytorium włączona. Obecna integracja nie potrafi odczytać listy stron wiki, więc nie można potwierdzić, czy wiki zawiera treść wymagającą osobnej migracji.
+
+### Branch protection
+
+Metadane gałęzi wskazują `protected: false`, a repo nie ma rulesetów. Szczegółowy endpoint branch protection jest niedostępny dla podłączonej aplikacji, więc nie można wykonać dodatkowej weryfikacji reguł administracyjnych.
+
+## Stan wykonania
+
+Fork nie został jeszcze utworzony, ponieważ podłączona integracja GitHub nie udostępnia operacji tworzenia forka ani nowego repozytorium w organizacji. Nie tworzono ręcznego „pseudo-forka”, aby nie utracić relacji upstream i metadanych GitHuba.
+
+Po utworzeniu forka należy zweryfikować:
+
+1. obecność gałęzi `main` i `develop`,
+2. zgodność SHA ich głów,
+3. historię commitów,
+4. brak/presence tagów zgodnie ze źródłem,
+5. zachowanie relacji fork → upstream,
+6. stan workflowów bez uruchamiania deploymentu.
