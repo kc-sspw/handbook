@@ -59,14 +59,17 @@ Metadane gałęzi wskazują `protected: false`, a repo nie ma rulesetów. Szczeg
 
 ## Stan wykonania
 
-Wyjątek publicznego forka został zatwierdzony. Sam fork nie został jeszcze utworzony, ponieważ podłączona integracja GitHub nie udostępnia operacji tworzenia forka, a w środowisku wykonawczym nie ma uwierzytelnionego GitHub CLI.
+Fork został utworzony jako `kc-sspw/zp-app` i zweryfikowany 8.10.2026.
 
-Po utworzeniu forka należy zweryfikować:
+Weryfikacja:
+- GitHub raportuje repo jako fork z parent/source `kasrow12/zp-app`,
+- widoczność pozostaje publiczna zgodnie z zatwierdzonym wyjątkiem,
+- `main` → `2b3e674dbf6995ea077326fc1ab2dbf45ae422d4` — identycznie jak upstream,
+- `develop` → `f49bf6dc230a59fc05a79ca44931827a9428cb2c` — identycznie jak upstream,
+- historia forka zwraca 59 commitów,
+- brak tagów pozostaje zgodny ze źródłem,
+- Wiki pozostaje włączona,
+- Issues są obecnie wyłączone w forku,
+- nie uruchomiono deploymentu ani nie rekonfigurowano automatyzacji.
 
-1. obecność gałęzi `main` i `develop`,
-2. zgodność SHA ich głów,
-3. historię commitów,
-4. brak/presence tagów zgodnie ze źródłem,
-5. relację fork → upstream `kasrow12/zp-app`,
-6. właściciela `kc-sspw` i widoczność publiczną,
-7. stan wiki i workflowów bez uruchamiania deploymentu.
+Następny krok dla repozytorium: włączyć Issues, jeśli zadania Kreatora ZP mają być prowadzone bezpośrednio w repo, oraz przypisać właściwy zespół projektowy.
