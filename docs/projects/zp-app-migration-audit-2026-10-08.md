@@ -68,9 +68,11 @@ Ograniczenie: obecna integracja nie ma dostępu do GitHub Secret Scanning API an
 
 ## Wybór migracji
 
-Rekomendacja: **fork do `kc-sspw`**.
+Rekomendacja: **transfer `kasrow12/zp-app` do `kc-sspw`**.
 
-Transfer nie może zostać wykonany przez aktualnie połączone konto, ponieważ nie ma ono Admin do źródła. Fork zachowuje upstream i nie zmienia źródłowego repozytorium.
+Repozytorium jest kanonicznym projektem SSPW, nie forkiem zewnętrznego upstreamu. Transfer przenosi odpowiedzialność organizacyjną bez tworzenia drugiej kopii i bez zmiany widoczności istniejącego publicznego repozytorium. Fork byłby nowym publicznym repozytorium, co kolidowałoby z zasadą tworzenia nowych repozytoriów projektowych jako prywatnych.
+
+Transfer nie może zostać wykonany przez aktualnie połączone konto, ponieważ nie ma ono Admin do źródła.
 
 ## Blokada narzędziowa
 
@@ -80,4 +82,4 @@ Podłączony konektor GitHub nie udostępnia operacji:
 - utworzenia nowego repozytorium,
 - transferu repozytorium.
 
-Z tego powodu sama operacja fork nie została wykonana. Nie zastosowano alternatywnego kopiowania historii do nowego repo, ponieważ bez możliwości utworzenia repo docelowego oraz bez relacji GitHub Fork byłoby to gorsze od właściwego forka.
+Z tego powodu transfer nie został wykonany. Nie zastosowano alternatywnego kopiowania historii ani forka, ponieważ tworzyłoby to drugie repozytorium zamiast przenieść własność istniejącego projektu.
