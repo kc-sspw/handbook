@@ -7,7 +7,7 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 1. **Mój Akademik** — planowane repo: `moj-akademik`.
 2. **Appka eventowa** — planowane repo: `appka-eventowa`. W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
 3. **System wypożyczania istniejącego sprzętu** — planowane repo: `wypozyczalnia-sprzetu`.
-4. **zp-app** — istniejąca praca do zachowania i przeniesienia/forkowania po potwierdzeniu dokładnego źródła.
+4. **zp-app** — potwierdzone źródło: `kasrow12/zp-app`; preferowany fork do organizacji `kc-sspw`, z zachowaniem upstreamu.
 
 **PWHub jest poza zakresem tego portfela GitHub i nie należy zmieniać jego repozytoriów ani konfiguracji w ramach tego zadania.**
 
@@ -53,4 +53,4 @@ Projekt dotyczy istniejącego sprzętu; zakupy nie są warunkiem. Minimalny proc
 
 ### zp-app
 
-Przed migracją trzeba potwierdzić źródłową platformę i repozytorium. Następnie dobrać fork, transfer albo migrację z zachowaniem historii Git.
+Źródło zostało potwierdzone jako publiczne repozytorium GitHub `kasrow12/zp-app`. Audyt wykazał gałęzie `main` i `develop`, brak tagów/releases/issues oraz historyczny workflow Azure na `develop`. Preferowany jest fork do `kc-sspw`; sama operacja jest zablokowana przez brak akcji tworzenia forka w aktualnej integracji.
