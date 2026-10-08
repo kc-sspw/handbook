@@ -7,7 +7,7 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 1. **Mój Akademik** — planowane repo: `moj-akademik`.
 2. **Appka eventowa** — planowane repo: `appka-eventowa`. W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
 3. **System wypożyczania istniejącego sprzętu** — planowane repo: `wypozyczalnia-sprzetu`.
-4. **zp-app** — potwierdzone źródło: `kasrow12/zp-app`; preferowany transfer istniejącego repozytorium do organizacji `kc-sspw` bez zmiany widoczności.
+4. **zp-app** — potwierdzone źródło: `kasrow12/zp-app`; zatwierdzony publiczny fork do organizacji `kc-sspw` z zachowaniem relacji upstream.
 
 **PWHub jest poza zakresem tego portfela GitHub i nie należy zmieniać jego repozytoriów ani konfiguracji w ramach tego zadania.**
 
@@ -17,7 +17,7 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 - Todoist pozostaje osobistym systemem zadań.
 - Google Calendar pozostaje miejscem bloków czasu.
 - Nie synchronizujemy automatycznie tych systemów.
-- Nowe repozytoria projektowe mają być prywatne.
+- Nowe repozytoria projektowe mają być prywatne; wyjątek: zatwierdzony publiczny fork `zp-app`.
 - Nie dodajemy licencji bez potwierdzenia praw do kodu.
 - Nie narzucamy technologii przed uzgodnieniem wymagań i właściciela technicznego.
 
@@ -53,4 +53,4 @@ Projekt dotyczy istniejącego sprzętu; zakupy nie są warunkiem. Minimalny proc
 
 ### zp-app
 
-Źródło zostało potwierdzone jako publiczne repozytorium GitHub `kasrow12/zp-app`. Audyt wykazał gałęzie `main` i `develop`, brak tagów/releases/issues oraz historyczny workflow Azure na `develop`. Preferowany jest transfer do `kc-sspw`; operacja jest zablokowana, ponieważ aktualne konto nie ma Admin do repozytorium źródłowego, a integracja nie udostępnia akcji transferu.
+Źródło zostało potwierdzone jako publiczne repozytorium GitHub `kasrow12/zp-app`. Audyt wykazał gałęzie `main` i `develop`, brak tagów/releases/issues oraz historyczny workflow Azure na `develop`. Zatwierdzony jest publiczny fork do `kc-sspw` jako wyjątek od domyślnej prywatności nowych repozytoriów. Operacja pozostaje zablokowana technicznie, ponieważ aktualna integracja nie udostępnia tworzenia forka.
