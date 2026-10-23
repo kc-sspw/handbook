@@ -1,5 +1,7 @@
 # Publiczny kod projektów i ochrona gałęzi KC SSPW
 
+**Status wdrożenia: 23.10.2026 — 7/7 repozytoriów publicznych, 7/7 aktywnych Rulesetów.** Szczegóły w sekcji „Weryfikacja zmian”.
+
 **Decyzja organizacyjna: 23.10.2026.** Docelowy model dla utrzymywanych projektów Komisji to **publiczne repozytoria, kontrolowany zapis przez uprawnienia Teams, review PR oraz ochrona gałęzi**. Dane osobowe, bazy, sekrety, prywatne pliki środowiska i dostęp do infrastruktury nie mogą trafić do repo. Ta decyzja sama **nie zmienia widoczności repozytoriów ani ustawień GitHuba**; poniżej podano sposób wdrożenia i weryfikacji.
 
 ## Zakres wdrożenia
@@ -73,6 +75,8 @@ Nie commitujemy prawdziwych baz danych, danych mieszkańców, prywatnych zdjęć
 
 ## Weryfikacja zmian
 
-W dniu decyzji (23.10.2026) trzy repozytoria wymienione wyżej były nadal **private**, a w sprawdzonych repozytoriach publicznych nie było aktywnych Rulesets. Dopóki Owner nie wykona procedury i nie potwierdzimy nowego stanu, **nie oznaczamy ich jako publicznych ani chronionych**.
+Przed wdrożeniem (23.10.2026) trzy repozytoria portfela były **private**, a publiczne repozytoria nie miały nowych Rulesets. **Stan po wdrożeniu zweryfikowany tego samego dnia przez GitHub API:** wszystkie **7/7 repozytoriów portfela są publiczne**, każde ma aktywny repozytoryjny Ruleset zgodny z szablonem i `main` jest raportowana jako chroniona. Wyjątek: szkolenia i PW Hub pozostają poza zakresem.
+
+**Jeszcze niewykonane/niezweryfikowane:** praktyczny test odrzucenia push/merge bez review, konfiguracja Teams i `Base permissions`, outside collaborators, 2FA i polityki Actions w UI organizacji. Status GitHub API nie potwierdza tych ustawień.
 
 Dokumentacja GitHub: [widoczność repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility), [tworzenie Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository), [reguły](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).

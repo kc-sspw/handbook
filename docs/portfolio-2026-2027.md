@@ -4,9 +4,9 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 
 ## Projekty w zakresie
 
-1. **Mój Akademik** — repo: `kc-sspw/moj-akademik` (docelowo public; przed wdrożeniem decyzji stan: private).
-2. **Appka eventowa** — repo: `kc-sspw/appka-eventowa` (docelowo public; przed wdrożeniem decyzji stan: private). W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
-3. **System wypożyczania istniejącego sprzętu** — repo: `kc-sspw/system-wypozyczen` (docelowo public; przed wdrożeniem decyzji stan: private).
+1. **Mój Akademik** — repo: `kc-sspw/moj-akademik` (**public**, Ruleset chroni `main`).
+2. **Appka eventowa** — repo: `kc-sspw/appka-eventowa` (**public**, Ruleset chroni `main`). W dotychczasowych źródłach projekt był opisywany jako „appka wyjazdowa”.
+3. **System wypożyczania istniejącego sprzętu** — repo: `kc-sspw/system-wypozyczen` (**public**, Ruleset chroni `main`).
 4. **zp-app** — publiczny fork `kc-sspw/zp-app` źródła `kasrow12/zp-app`, z zachowaniem relacji upstream.
 
 **PWHub jest poza zakresem tego portfela GitHub i nie należy zmieniać jego repozytoriów ani konfiguracji w ramach tego zadania.**
@@ -17,7 +17,7 @@ Ten dokument opisuje zakres GitHubowy dla czterech projektów Komisji Cyfryzacji
 - Todoist pozostaje osobistym systemem zadań.
 - Google Calendar pozostaje miejscem bloków czasu.
 - Nie synchronizujemy automatycznie tych systemów.
-- **Decyzja 23.10.2026:** repozytoria utrzymywanych projektów mają być publiczne, a zapis kontrolowany przez Teams i aktywne repozytoryjne Rulesets. Szczegóły i stan wdrożenia: [publiczny kod i Rulesets](public-code-and-rulesets.md).
+- **Zrealizowane 23.10.2026:** repozytoria utrzymywanych projektów są publiczne (7/7 portfela), a `main` chronione aktywnymi repozytoryjnymi Rulesets (7/7). Zapis kontrolują uprawnienia organizacji/Teams — ich audyt pozostaje zadaniem Ownera. Szczegóły: [publiczny kod i Rulesets](public-code-and-rulesets.md).
 - Nie dodajemy licencji bez jawnej decyzji o licencjonowaniu i warunkach wykorzystania kodu.
 - Nie narzucamy technologii przed uzgodnieniem wymagań i właściciela technicznego.
 - GitHub Actions nie odpowiada za produkcyjne wdrożenia tych projektów KC; do tego służy oddzielna infrastruktura CI. Nie kopiujemy Actions do repo szkoleniowych.
