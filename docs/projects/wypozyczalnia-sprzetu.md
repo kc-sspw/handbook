@@ -33,4 +33,4 @@ Ustalić właściciela procesu i wykonać pierwszą inwentaryzację potrzebną d
 
 ## Repozytorium
 
-`kc-sspw/system-wypozyczen` — docelowo **publiczne**, po potwierdzeniu przez Ownera. Dane wypożyczeń i użytkowników nie trafiają do repo. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
+`kc-sspw/system-wypozyczen` — **publiczne**, `main` chronione aktywnym Rulesetem (stan zweryfikowany 23.10.2026). Dane wypożyczeń i użytkowników nie trafiają do repo. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
