@@ -33,4 +33,4 @@ Zamknąć zakres MVP i kryteria pilotażu na podstawie aktualnych materiałów.
 
 ## Repozytorium
 
-`kc-sspw/appka-eventowa` — docelowo **publiczne**, po potwierdzeniu zmiany widoczności przez Ownera. Kod i zadania projektowe są jawne; prawdziwe dane wydarzeń i poświadczenia nie trafiają do Git. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
+`kc-sspw/appka-eventowa` — **publiczne**, `main` chronione aktywnym Rulesetem (stan zweryfikowany 23.10.2026). Kod i zadania projektowe są jawne; dane wydarzeń i poświadczenia nie trafiają do Git. [Instrukcja rozpoczęcia PoC](https://github.com/kc-sspw/appka-eventowa/blob/main/docs/POC_START_HERE.md); zasady współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
