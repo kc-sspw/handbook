@@ -11,6 +11,7 @@ Celem handbooka jest ograniczenie wiedzy „tylko w głowach” i ułatwienie pr
 - [Struktura organizacji i ludzi](docs/organization-structure.md) — Owners, członkowie, prowadzący, zespoły projektowe i uczestnicy szkoleń.
 - [Model uprawnień](docs/access-model.md) — jak nadawać dostęp do organizacji i repozytoriów.
 - [Repozytoria i nazewnictwo](docs/repositories.md) — kiedy tworzyć repo i jak je nazywać.
+- [Publiczne repozytoria i Rulesets](docs/public-code-and-rulesets.md) — docelowy model, zasady Teams, ochrona `main`, szablon i procedura przejścia na publiczny kod.
 - [Cykl życia projektu](docs/project-lifecycle.md) — od pomysłu do archiwizacji.
 - [Prowadzenie projektów](docs/projects.md) — domyślny workflow dla utrzymywanych projektów Komisji.
 - [Etykiety projektów](docs/github-labels.md) — wspólna taksonomia typu, priorytetu i blokad.
@@ -32,6 +33,7 @@ Celem handbooka jest ograniczenie wiedzy „tylko w głowach” i ułatwienie pr
 - [Wymagania projektu](templates/PROJECT_REQUIREMENTS.md)
 - [ADR — decyzja architektoniczna](templates/ADR.md)
 - [Krótki CONTRIBUTING](templates/PROJECT_CONTRIBUTING.md)
+- [Ruleset `KC SSPW — protected main`](templates/kc-protected-main-ruleset.json) — szablon JSON do importu oddzielnie w każdym publicznym repo utrzymywanym przez KC.
 - [README dla repozytorium szkoleniowego](templates/TRAINING_README.md)
 - [Starter Node.js do szkolenia Azure](templates/training-azure-node/) — minimalna aplikacja, test i GitHub Actions CI.
 
