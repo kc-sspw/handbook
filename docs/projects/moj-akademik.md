@@ -30,4 +30,4 @@ Uzgodnić z Komisją problem, lidera, pierwszy ograniczony etap i kryterium odbi
 
 ## Repozytorium
 
-`kc-sspw/moj-akademik` — docelowo **publiczne**, po potwierdzeniu przez Ownera. Dane mieszkańców i zasoby SharePoint pozostają poza repo. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
+`kc-sspw/moj-akademik` — **publiczne**, `main` chronione aktywnym Rulesetem (stan zweryfikowany 23.10.2026). Dane mieszkańców i zasoby SharePoint pozostają poza repo. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).
