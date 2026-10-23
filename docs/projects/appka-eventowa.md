@@ -31,6 +31,6 @@ W planie występuje reguła usuwania zdjęć 30 dni po zakończeniu danego wyjaz
 
 Zamknąć zakres MVP i kryteria pilotażu na podstawie aktualnych materiałów.
 
-## Proponowane repozytorium
+## Repozytorium
 
-`kc-sspw/appka-eventowa` — prywatne.
+`kc-sspw/appka-eventowa` — docelowo **publiczne**, po potwierdzeniu zmiany widoczności przez Ownera. Kod i zadania projektowe są jawne; prawdziwe dane wydarzeń i poświadczenia nie trafiają do Git. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).

@@ -40,9 +40,11 @@ Dla repozytorium autora szkolenia wystarczy, że autor może swobodnie pushować
 
 ## Base permissions organizacji
 
-Dla organizacji, do której okresowo trafiają także uczestnicy szkoleń, bezpiecznym punktem wyjścia jest brak szerokiego automatycznego zapisu do wszystkich repozytoriów.
+Dla przyjętego modelu **publiczny kod, kontrolowany zapis** rekomendowane **Base permissions: None**. Publiczne repozytoria każdy może czytać bez tej roli, ale zwykłe członkostwo w organizacji nie powinno dawać dostępu Write.
 
-Dostęp do utrzymywanych projektów powinien wynikać z zespołów.
+Dostęp do utrzymywanych projektów powinien wynikać z uprawnień Teams, a nie z globalnego przywileju organizacyjnego. Publiczny PR z forka może zaproponować także osoba spoza Teams, lecz bez prawa do push ani merge na `main`.
+
+Ochronę gałęzi, bypass Ownera i weryfikację aktywnego egzekwowania Rulesetów opisuje [Publiczny kod i Rulesets](public-code-and-rulesets.md).
 
 ## Tworzenie repozytoriów przez członków
 

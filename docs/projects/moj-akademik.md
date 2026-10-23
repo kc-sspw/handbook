@@ -28,6 +28,6 @@ Nie zakładamy systemu zgłoszeń, płatności, rezerwacji ani innych funkcji be
 
 Uzgodnić z Komisją problem, lidera, pierwszy ograniczony etap i kryterium odbioru.
 
-## Proponowane repozytorium
+## Repozytorium
 
-`kc-sspw/moj-akademik` — prywatne.
+`kc-sspw/moj-akademik` — docelowo **publiczne**, po potwierdzeniu przez Ownera. Dane mieszkańców i zasoby SharePoint pozostają poza repo. Reguły współpracy: [Publiczny kod i Rulesets](../public-code-and-rulesets.md).

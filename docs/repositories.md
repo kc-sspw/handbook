@@ -28,19 +28,19 @@ Dla repozytoriów uczestników szkolenia warto stosować wspólny prefiks związ
 
 Nie ma potrzeby wymuszać jednego schematu dla wszystkich przyszłych szkoleń — ważniejsza jest spójność w ramach konkretnej edycji.
 
-## Widoczność
+## Widoczność i bezpieczeństwo
 
-Domyślnie:
+**Decyzja KC z 23.10.2026:** utrzymywane projekty Komisji docelowo rozwijamy jako **publiczne repozytoria kodu**, z kontrolowanym zapisem przez Teams i ochroną gałęzi przez repozytoryjne Rulesets. Szczegóły, plan przejścia i weryfikacja: [Publiczny kod i Rulesets](public-code-and-rulesets.md).
 
-- materiały szkoleniowe i projekty open source mogą być publiczne,
-- nowe repozytoria utrzymywanych projektów Komisji tworzymy prywatne, jeśli nie ma zatwierdzonego wyjątku,
-- repozytoria zawierające dane lub integracje, których nie należy ujawniać, powinny być prywatne.
+- Kod projektu, dokumentacja i niewrażliwe przykłady mogą być publiczne.
+- Dane osobowe, rzeczywiste bazy, prywatne zdjęcia, sekrety, certyfikaty i poufne informacje organizacyjne **nie mogą** być przechowywane w publicznym repo.
+- Jeśli projekt wymaga rzeczywiście poufnych plików, wydziel je poza repo lub użyj odpowiednio chronionego zasobu; nie wystawiaj ich tylko dla ujednolicenia widoczności.
+- Repozytoria szkoleniowe zachowują osobne zasady pracy i nie dziedziczą automatycznie restrykcyjnego Rulesetu projektowego.
+- Repozytorium `zp-app` pozostaje publicznym forkiem `kasrow12/zp-app` z zachowaniem relacji upstream.
 
-### Zatwierdzony wyjątek 2026/2027
+**Ważne:** decyzja o publicznym kodzie nie jest informacją, że trzy repo zostały już przełączone. Zmiana widoczności wymaga potwierdzenia Ownera w UI lub przez autoryzowane API. Sama publiczność repo nie daje postronnym prawa push/merge.
 
-Dla `zp-app` zatwierdzono publiczny fork źródła `kasrow12/zp-app` do organizacji `kc-sspw`. Wyjątek wynika z potrzeby zachowania relacji GitHub fork/upstream dla istniejącego publicznego projektu i nie zmienia domyślnej zasady dla pozostałych nowych repozytoriów projektowych.
-
-Sama prywatność repozytorium nie zastępuje poprawnego zarządzania sekretami.
+Prawa autorskie i licencje są oddzielnymi zagadnieniami. Bez decyzji o licencji nie dodajemy jej automatycznie.
 
 ## README jest obowiązkowe
 
